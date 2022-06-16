@@ -1,0 +1,10 @@
+baseURL: "http://example.org/"
+languageCode: en-us
+title: fissssssh
+theme: PaperMod
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 3
