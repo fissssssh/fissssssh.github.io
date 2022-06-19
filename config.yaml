@@ -7,4 +7,11 @@ menu:
     - identifier: posts
       name: 文章
       url: /posts/
-      weight: 3
+      weight: 1
+    - identifier: misc
+      name: 杂项
+      url: /categories/misc/
+      weight: 2
+taxonomies:
+  category: categories
+  tag: tags
