@@ -8,10 +8,39 @@ menu:
       name: 文章
       url: /posts/
       weight: 1
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 2
     - identifier: misc
       name: 杂项
       url: /categories/misc/
-      weight: 2
+      weight: 3
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 4
+
 taxonomies:
   category: categories
   tag: tags
+
+disqusShortname: fissssssh
+
+# theme
+params:
+  homeInfoParams:
+    Title: Make .NET Great Again
+    Content: obviously impossible
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/fissssssh"
+  ShowCodeCopyButtons: true
+  comments: true
+# for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
