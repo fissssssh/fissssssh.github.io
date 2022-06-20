@@ -36,8 +36,11 @@ params:
   socialIcons: # optional
     - name: "github"
       url: "https://github.com/fissssssh"
-  ShowCodeCopyButtons: true
   comments: true
+  editPost:
+    URL: "https://github.com/fissssssh/fissssssh.github.io/edit/master/content"
+    Text: "Edit" # edit text
+    appendFilePath: true # to append file path to Edit link
 # for search
 outputs:
   home:
