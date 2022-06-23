@@ -1,0 +1,75 @@
+.links {
+  --link-count-per-row: 1;
+}
+@media screen and (min-width: 576px) {
+  .links {
+    --link-count-per-row: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .links {
+    --link-count-per-row: 3;
+  }
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(var(--link-count-per-row), 1fr);
+  grid-gap: 16px;
+}
+
+/* 空间占位 */
+.link-skeleton {
+  height: 280px;
+  display: inline-block;
+  position: relative;
+}
+
+/* 动画元素 */
+.link {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.link:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
+    0 1px 14px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 实际元素 */
+.link-card {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link-card-avatar {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.link-card-content {
+  text-align: center;
+  flex: 1;
+  width: 100%;
+  padding: 16px;
+}
+.link-card-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.link-card-description {
+  font-size: 0.8rem;
+  color: var(--secondary);
+}

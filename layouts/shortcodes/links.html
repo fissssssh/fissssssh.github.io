@@ -1,0 +1,17 @@
+<div class="links">
+  {{ range .Page.Params.links -}}
+  <div class="link-skeleton">
+    <div class="link">
+      <a href="{{ .url}}" target="_blank">
+        <div class="link-card">
+          <img class="link-card-avatar" src="{{ .avatar}}" />
+          <div class="link-card-content">
+            <div class="link-card-name">{{ .name}}</div>
+            <div class="link-card-description">{{ .description}}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  {{- end }}
+</div>
