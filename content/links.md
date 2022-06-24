@@ -2,7 +2,6 @@
 title: "Links"
 date: 2022-06-23T22:29:20+08:00
 draft: false
-layout: "links"
 hideMeta: true
 comments: false
 links:

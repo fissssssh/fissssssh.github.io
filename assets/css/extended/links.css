@@ -1,11 +1,13 @@
 .links {
   --link-count-per-row: 1;
 }
+
 @media screen and (min-width: 576px) {
   .links {
     --link-count-per-row: 2;
   }
 }
+
 @media screen and (min-width: 768px) {
   .links {
     --link-count-per-row: 3;
@@ -25,52 +27,51 @@
   position: relative;
 }
 
-/* 动画元素 */
 .link {
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.67s cubic-bezier(0.19, 1, 0.22, 1);
   border-radius: var(--radius);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
   overflow: hidden;
-}
-
-.link:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
-    0 1px 14px 0 rgba(0, 0, 0, 0.12) !important;
-}
-
-/* 实际元素 */
-.link-card {
-  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.link-card-avatar {
+.link:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.link-avatar {
   object-fit: cover;
   width: 100%;
   height: 180px;
   margin: 0 !important;
   border-radius: 0 !important;
 }
-.link-card-content {
+.link-content {
   text-align: center;
   flex: 1;
   width: 100%;
   padding: 16px;
-  background: var(--entry)
-}
-.link-card-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  background: var(--entry);
+  transform: translate3d(0, 0, 0);
 }
 
-.link-card-description {
+.link-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: inherit;
+}
+
+.link-description {
   font-size: 0.8rem;
   color: var(--secondary);
+  transform: translate3d(0, 0, 0);
 }

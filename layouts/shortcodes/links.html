@@ -1,17 +1,15 @@
 <div class="links">
   {{ range .Page.Params.links -}}
   <div class="link-skeleton">
-    <div class="link">
-      <a href="{{ .url}}" target="_blank">
-        <div class="link-card">
-          <img class="link-card-avatar" src="{{ .avatar}}" />
-          <div class="link-card-content">
-            <div class="link-card-name">{{ .name}}</div>
-            <div class="link-card-description">{{ .description}}</div>
-          </div>
+    <a href="{{ .url}}" target="_blank">
+      <div class="link">
+        <img class="link-avatar" src="{{ .avatar}}" />
+        <div class="link-content">
+          <div class="link-name">{{ .name}}</div>
+          <div class="link-description">{{ .description}}</div>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
   {{- end }}
 </div>
