@@ -41,12 +41,17 @@ Failed to find a valid digest in the 'integrity' attribute for resource '***' wi
 
 ## 其他解决方案
 
-我使用的是 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题，可以将主题文件 `layouts/partials/head.html` 中 css 引用部分的 integrity 属性去除，同样可以解决，但我觉得主题毕竟是第三方库，在非必要情况下不要修改第三方库。
+我使用的是 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题，可以在配置中关闭校验：
 
-```diff
-- <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
-+ <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+**config.yaml**
+
+```yaml
+params:
+  assets:
+    disableFingerprinting: true
 ```
+
+关闭校验后在生成页面的时候 css 文件引用就不会有 integrity 属性
 
 ## 结束语
 
