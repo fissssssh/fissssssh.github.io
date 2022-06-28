@@ -47,6 +47,7 @@ params:
     appendFilePath: true # to append file path to Edit link
   assets:
     disableHLJS: true
+    disableFingerprinting: true
 # for search
 outputs:
   home:
