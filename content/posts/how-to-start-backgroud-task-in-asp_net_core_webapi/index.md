@@ -283,10 +283,10 @@ namespace RunTaskInBackground.Demo.Controllers
 
 ![](./demo.png)
 
+附[完整 Demo 地址](https://github.com/fissssssh/RunTaskInBackground.Demo)
+
 ## 参考
 
 1. Anduin Xue.Fire and forget in ASP.NET Core with dependency alive[EB/OL].(2020-10-14)[2022-06-27].<https://anduin.aiursoft.com/post/2020/10/14/fire-and-forget-in-aspnet-core-with-dependency-alive>
 
-## 附
-
-1. [完整 Demo 地址](https://github.com/fissssssh/RunTaskInBackground.Demo)
+> 本作品采用[署名-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议许可
