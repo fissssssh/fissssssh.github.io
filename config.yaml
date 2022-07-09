@@ -20,10 +20,14 @@ menu:
       name: 友链
       url: /links/
       weight: 4
+    - identifier: photos
+      name: 照片墙
+      url: /photos/
+      weight: 5
     - identifier: search
       name: 搜索
       url: /search/
-      weight: 5
+      weight: 6
 
 taxonomies:
   category: categories

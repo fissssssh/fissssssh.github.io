@@ -1,0 +1,24 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}</h1>
+</header>
+
+<div class="photo-container">
+  {{ range os.ReadDir "static/photos" }} {{ if not .IsDir}}
+  <div class="photo-item">
+    <a href="https://photos-1259637118.cos.ap-chengdu.myqcloud.com/{{ .Name }}" target="_blank">
+      <img src="{{ .Name }}" />
+    </a>
+  </div>
+  {{ end }} {{ end }}
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+  var msnry = new Masonry(".photo-container", {
+    itemSelector: ".photo-item",
+    columnWidht: ".photo-item",
+    gutter: 8,
+  });
+</script>
+{{- end }}
