@@ -43,7 +43,7 @@ Dapr 的安装分为两部分：
 ### 离线安装
 
 1. 下载[Dapr Install-Bundle](https://github.com/dapr/installer-bundle/releases/tag/v1.9.5)，下载文件的选择同 Dapr CLI
-2. 解压，并将 daprbundle/dapr（dapr.exe）移动到可执行文件夹下（参考[Install Dapr CLI](#Install-Dapr-CLI)的第 2 步）
+2. 解压，并将 daprbundle/dapr（dapr.exe）移动到可执行文件夹下（参考[在线安装](#在线安装)中安装 Dapr CLI 的第 2 步）
 3. 移动到 daprbundle 文件夹下执行 `dapr init --from-dir .`
 4. 离线安装不会安装 zipkin 和 redis，可以使用下列指令进行安装
 
