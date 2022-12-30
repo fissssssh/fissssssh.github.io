@@ -1,5 +1,5 @@
 baseURL: "https://fissssssh.com/"
-languageCode: en-us
+defaultContentLanguage: zh
 title: fissssssh
 theme: PaperMod
 menu:
@@ -12,6 +12,10 @@ menu:
       name: 归档
       url: /archives/
       weight: 2
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 3
     - identifier: links
       name: 友链
       url: /links/
@@ -39,11 +43,12 @@ params:
   comments: true
   editPost:
     URL: "https://github.com/fissssssh/fissssssh.github.io/edit/master/content"
-    Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
   assets:
     disableHLJS: true
     disableFingerprinting: true
+  showCodeCopyButtons: true
+  dateFormat: "2006年1月2日"
 # for search
 outputs:
   home:
