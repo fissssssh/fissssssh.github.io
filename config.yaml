@@ -1,0 +1,59 @@
+baseURL: "https://fissssssh.com/"
+languageCode: en-us
+title: fissssssh
+theme: PaperMod
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 1
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 2
+    - identifier: misc
+      name: 杂项
+      url: /categories/misc/
+      weight: 3
+    - identifier: links
+      name: 友链
+      url: /links/
+      weight: 4
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 6
+
+taxonomies:
+  category: categories
+  tag: tags
+
+disqusShortname: fissssssh
+
+# theme
+params:
+  homeInfoParams:
+    Title: Make .NET Great Again
+    Content: obviously impossible
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/fissssssh"
+  comments: true
+  editPost:
+    URL: "https://github.com/fissssssh/fissssssh.github.io/edit/master/content"
+    Text: "Edit" # edit text
+    appendFilePath: true # to append file path to Edit link
+  assets:
+    disableHLJS: true
+    disableFingerprinting: true
+# for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+markup:
+  highlight:
+    style: dracula
