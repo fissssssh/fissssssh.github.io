@@ -12,10 +12,6 @@ menu:
       name: 归档
       url: /archives/
       weight: 2
-    - identifier: misc
-      name: 杂项
-      url: /categories/misc/
-      weight: 3
     - identifier: links
       name: 友链
       url: /links/

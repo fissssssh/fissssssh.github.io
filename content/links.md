@@ -1,5 +1,5 @@
 ---
-title: "Links"
+title: "友链"
 date: 2022-06-23T22:29:20+08:00
 draft: false
 hideMeta: true
