@@ -30,8 +30,8 @@ disqusShortname: fissssssh
 # theme
 params:
   homeInfoParams:
-    Title: Make .NET Great Again
-    Content: obviously impossible
+    Title: Welcome
+    Content: I'm a Chinese software engineer, here are all my experience.
 
   socialIcons: # optional
     - name: "github"
