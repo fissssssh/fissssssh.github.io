@@ -1,0 +1,38 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+<div class="tags">
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    <div class="tag-card">
+        <div class="tag-card-header">
+            <h2>
+                <a href="{{ .Page.Permalink }}" title="{{ .Name }}">{{ .Name }} </a>
+                <sup><strong>{{ .Count }}</strong></sup>
+            </h2>
+        </div>
+        <div class="tag-card-body">
+            <ul>
+                {{ $length := (len .WeightedPages)}}
+                {{- range $i, $p := (first 3 .WeightedPages) }}
+                <li><a href="{{ $p.Permalink }}" title="{{ $p.Title }}">{{ $p.Title }}</a></li>
+                {{- end}}
+                {{- if gt $length 3}}
+                <li><a href="{{ $.Page.Permalink }}" title="view more">...</a></li>
+                {{- end}}
+            </ul>
+        </div>
+    </div>
+    {{- end}}
+</div>
+
+{{- end }}{{/* end main */ -}}

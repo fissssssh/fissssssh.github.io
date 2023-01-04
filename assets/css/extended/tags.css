@@ -1,0 +1,48 @@
+.tags {
+    --tag-count-per-row: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .tags {
+        --tag-count-per-row: 2;
+    }
+}
+
+.tags {
+    display: grid;
+    grid-template-columns: repeat(var(--tag-count-per-row), 1fr);
+    grid-gap: 16px;
+}
+
+.tag-card {
+    border: 2px solid var(--tertiary);
+    border-radius: var(--radius);
+}
+
+.tag-card a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.tag-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--tertiary);
+    padding: 8px;
+}
+
+.tag-card-body {
+    padding: 8px;
+}
+
+.tag-card-body>ul {
+    list-style: none;
+}
+
+.tag-card-body>ul>li {
+    width: 99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
