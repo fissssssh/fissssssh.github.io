@@ -1,7 +1,7 @@
 ---
 title: "如何在 ASP.NET Core WEB API 中启动后台任务"
 date: 2022-06-27T20:30:49+08:00
-categories: Development
+categories: development
 tags:
   - dotnet
   - ASP.NET Core

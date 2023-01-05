@@ -5,8 +5,6 @@ draft: false
 categories: Development
 tag:
   - Visual Studio
-  - plugins
-  - software
   - tools
 ---
 
