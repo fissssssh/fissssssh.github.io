@@ -1,0 +1,21 @@
+{{- define "main" }} {{- if .Title }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+{{- end }} {{- if .Content }}
+<div class="post-content">
+  <div class="links">{{ .Content }}</div>
+</div>
+
+<script>
+  // remove the unnecessary tags
+  let links = document.querySelector(".links");
+  let paras = links.querySelectorAll("p");
+  for (const p of paras) {
+    links.removeChild(p);
+  }
+</script>
+{{- end }} {{- end }}{{/* end main */ -}}

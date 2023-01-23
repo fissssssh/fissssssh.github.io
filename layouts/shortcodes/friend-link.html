@@ -1,0 +1,15 @@
+<div class="link-skeleton">
+    {{ $url := (.Get "url") }}
+    {{ $avatar := (.Get "avatar") }}
+    {{ $name := (.Get "name") }}
+    {{ $description := (.Get "description") }}
+  <a href="{{ $url }}" target="_blank">
+    <div class="link">
+      <img class="link-avatar" src="{{ $avatar }}" />
+      <div class="link-content">
+        <div class="link-name">{{ $name }}</div>
+        <div class="link-description">{{ $description }}</div>
+      </div>
+    </div>
+  </a>
+</div>
