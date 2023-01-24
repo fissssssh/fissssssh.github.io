@@ -1,0 +1,16 @@
+{{- if (not site.Params.disableThemeToggle) }}
+<script>
+  // reference: https://github.com/utterance/utterances/issues/549#issuecomment-907606127
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    const iframe = document.querySelector(".utterances-frame");
+    const message = {
+      type: "set-theme",
+      theme:
+        localStorage.getItem("pref-theme") === "light" // if current theme is light, then set comment widget's theme to dark, otherwise light.
+          ? "github-dark"
+          : "github-light",
+    };
+    iframe?.contentWindow.postMessage(message, "https://utteranc.es");
+  });
+</script>
+{{- end }}
