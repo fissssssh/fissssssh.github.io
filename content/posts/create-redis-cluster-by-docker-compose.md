@@ -164,7 +164,7 @@ bind 0.0.0.0
 cluster-enabled yes
 cluster-config-file nodes.conf
 cluster-node-timeout 5000
-cluster-announce-ip <your_external_ip>
+cluster-announce-ip <your_ip>
 cluster-announce-port 637${port}
 cluster-announce-bus-port 1637${port}
 appendonly yes
