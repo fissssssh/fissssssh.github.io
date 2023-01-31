@@ -171,7 +171,7 @@ appendonly yes
 EOF
 done
 ```
-Don't forget to provide your actual IP address instead of <your_ip> (f.i. 10.12.123.124). Otherwise you nodes wouldn't join into cluster.
+Don't forget to provide your actual IP address instead of <your_ip> (f.i. 10.12.123.124). Otherwise nodes wouldn't join into cluster.
 
 You can change port range if nesscessary
 
