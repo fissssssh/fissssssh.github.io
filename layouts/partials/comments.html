@@ -1,10 +1,17 @@
 <script>
   // reference: https://github.com/utterance/utterances/issues/299#issuecomment-626125665
   (function () {
-    const theme =
-      localStorage.getItem("pref-theme") === "dark"
+    let theme = localStorage.getItem("pref-theme");
+    // already has prefer theme
+    if (theme) {
+      theme = theme === "dark" ? "github-dark" : "github-light";
+    }
+    // auto detected
+    else {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "github-dark"
         : "github-light";
+    }
     const comment = document.createElement("script");
     comment.src = "https://utteranc.es/client.js";
     comment.crossorigin = "anonymous";
