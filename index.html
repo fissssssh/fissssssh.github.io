@@ -8,10 +8,10 @@ Microsoft.AspNetCore.Http.QueryString 此方法仅适用于 SDK 为 Microsoft.NE
 var queryString = QueryString.Create(new Dictionary&lt;string, string?> { ["a+b"] = "a%b", ["b"] = "2+1", })....</p></div><footer class=entry-footer><span title='2023-02-04 13:57:23 +0800 +0800'>2023年2月4日</span></footer><a class=entry-link aria-label="post link to 生成 HTTP 查询字符串" href=https://blog.fissssssh.com/posts/generate-http-query-string/></a></article><article class=post-entry><header class=entry-header><h2>在 Hugo 中集成 utterances 评论组件</h2></header><div class=entry-content><p>utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此组件可以将 Github issues 应用于任何网站
 前置条件 一个公开的 github repo 在该 repo 中安装utterances app 简单集成 打开utterances官网
 在 configuration 节点填写 repo 信息等，填写好后会生成对应的组件代码
-我使用的是 PaperMod 主题，将生成好的代码放入layouts/partials/comments.html
+我使用的是 PaperMod1 主题，将生成好的代码放入layouts/partials/comments.html
 &lt;!--layouts/partials/comments.html--> &lt;script src="https://utteranc.es/client.js" repo="[ENTER REPO HERE]" issue-term="pathname" theme="github-light" label="Comment" crossorigin="anonymous" async >&lt;/script> 然后在config.yaml中开启评论功能即可简单集成
-params: comments: true 动态主题适配 PaperMod 主题有明亮和暗黑两种模式，而 comments 组件的主题是编码时就写在script标签中的，为了使 comments 组件的主题适配 PaperMod 主题，有以下两个步骤：
-主题动态初始化 &lt;!-- layouts/partials/comments.html --> &lt;script> (function () { const theme = localStorage.getItem("pref-theme") === "dark" ? "github-dark" : "github-light"; const comment = document....</p></div><footer class=entry-footer><span title='2023-01-24 02:22:36 +0800 +0800'>2023年1月24日</span></footer><a class=entry-link aria-label="post link to 在 Hugo 中集成 utterances 评论组件" href=https://blog.fissssssh.com/posts/integrate-utterances-in-hugo/></a></article><article class=post-entry><header class=entry-header><h2>Newtonsoft.Json 小技巧</h2></header><div class=entry-content><p>Newtonsoft.Json 是一个非常受欢迎的 .NET JSON 框架
+params: comments: true 动态主题适配 PaperMod 有明亮和暗黑两种颜色模式，而 utterances 的主题是编码时就写在script标签中的，为了使 comments 组件的主题适配 PaperMod 颜色主题，有以下两个步骤：
+主题动态初始化 &lt;!-- layouts/partials/comments.html --> &lt;script> (function () { let theme = localStorage.getItem("pref-theme"); // already has prefer theme if (theme) { theme = theme === "dark" ?...</p></div><footer class=entry-footer><span title='2023-01-24 02:22:36 +0800 +0800'>2023年1月24日</span></footer><a class=entry-link aria-label="post link to 在 Hugo 中集成 utterances 评论组件" href=https://blog.fissssssh.com/posts/integrate-utterances-in-hugo/></a></article><article class=post-entry><header class=entry-header><h2>Newtonsoft.Json 小技巧</h2></header><div class=entry-content><p>Newtonsoft.Json 是一个非常受欢迎的 .NET JSON 框架
 一般来说大部分用户用到的方法主要就是 JsonConvert.SerializeObject 和 JsonConvert.DeserializeObject 方法
 前者用于将 .NET 对象 序列化为 JSON 字符串，后者则是将 JSON 字符串反序列化为 .NET 对象
 下面我将讲述一些你可能用过或者没用过的一些小技巧
