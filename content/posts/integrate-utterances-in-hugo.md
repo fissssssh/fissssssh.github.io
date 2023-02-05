@@ -17,7 +17,7 @@ utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此
 
 1. 打开[utterances](https://utteranc.es/)官网
 2. 在 configuration 节点填写 repo 信息等，填写好后会生成对应的组件代码
-3. 我使用的是 [PaperMod 主题][1]，将生成好的代码放入`layouts/partials/comments.html`
+3. 我使用的是 PaperMod[^1] 主题，将生成好的代码放入`layouts/partials/comments.html`
 
    ```html
    <!--layouts/partials/comments.html-->
@@ -42,7 +42,7 @@ utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此
 
 ## 动态主题适配
 
-[PaperMod 主题][1]有明亮和暗黑两种模式，而 comments 组件的主题是编码时就写在`script`标签中的，为了使 comments 组件的主题适配 [PaperMod 主题][1]，有以下两个步骤：
+PaperMod 有明亮和暗黑两种颜色模式，而 utterances 的主题是编码时就写在`script`标签中的，为了使 comments 组件的主题适配 PaperMod 颜色主题，有以下两个步骤：
 
 ### 主题动态初始化
 
@@ -51,15 +51,22 @@ utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此
 
 <script>
   (function () {
-    const theme =
-      localStorage.getItem("pref-theme") === "dark"
+    let theme = localStorage.getItem("pref-theme");
+    // already has prefer theme
+    if (theme) {
+      theme = theme === "dark" ? "github-dark" : "github-light";
+    }
+    // auto detected
+    else {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "github-dark"
         : "github-light";
+    }
     const comment = document.createElement("script");
     comment.src = "https://utteranc.es/client.js";
     comment.crossorigin = "anonymous";
     comment.async = true;
-    comment.setAttribute("repo", "[ENTER REPO HERE]");
+    comment.setAttribute("repo", "fissssssh/fissssssh.github.io");
     comment.setAttribute("issue-term", "pathname");
     comment.setAttribute("label", "Comment");
     comment.setAttribute("theme", theme);
@@ -67,6 +74,8 @@ utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此
   })();
 </script>
 ```
+
+> 用户未切换主题时，Local Storage 中还没有 `pref-theme` 的值，需要识别系统主题来确定评论组件的主题
 
 ### 主题动态切换
 
@@ -90,11 +99,11 @@ utterances 是基于 GitHub issues 构建的轻量级评论小部件，通过此
 {{- end }}
 ```
 
-> [PaperMod 主题][1]会将当前主题存在 `localStorage`->`pref-theme` 下
+> PaperMod 会将当前颜色主题存在 `localStorage`->`pref-theme` 下
 
 ## 参考
 
 - [Adaptive dark theme](https://github.com/utterance/utterances/issues/299#issuecomment-626125665)
 - [Dynamic theme changing](https://github.com/utterance/utterances/issues/549#issuecomment-907606127)
 
-[1]: https://github.com/adityatelange/hugo-PaperMod
+[^1]: https://github.com/adityatelange/hugo-PaperMod
