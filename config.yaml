@@ -35,7 +35,7 @@ disqusShortname: fissssssh
 params:
   homeInfoParams:
     Title: Welcome
-    Content: I'm a Chinese software engineer, here are all my experience.
+    Content: I'm a Chinese software engineer, here is all my experience.
 
   socialIcons: # optional
     - name: "github"
