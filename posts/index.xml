@@ -4,7 +4,7 @@
 git-filter-repo git-filter-repo 是一个用于重写历史提交的多功能工具，它和 git filter-branch 比较相似，但是其性能远远优于后者
 git 官方也推荐使用 git-filter-repo 而不是 git filter-branch
 安装 前置 git &amp;gt;= 2.22.0 at a minimum; some features require git &amp;gt;= 2.24.0 or later python3 &amp;gt;= 3.5 包管理器安装 PACKAGE_TOOL install git-filter-repo 手动安装 下载最新的 Release 解压后将 git-filter-repo 文件复制到 git --exec-path 文件夹下
-如果你的 python3 指令被命名为 python ，你还需要将 git-filter-repo 文件第一行中的 python3 改为 python（此问题困染了大部分 Windows 用户）</description></item><item><title>生成 HTTP 查询字符串</title><link>https://blog.fissssssh.com/posts/generate-http-query-string/</link><pubDate>Sat, 04 Feb 2023 13:57:23 +0800</pubDate><guid>https://blog.fissssssh.com/posts/generate-http-query-string/</guid><description>什么是 HTTP 查询字符串 例如此 URL：https://example.com:80/query?key1=value2&amp;amp;key2=value2
+如果你的 python3 指令被命名为 python ，你还需要将 git-filter-repo 文件第一行中的 python3 改为 python（此问题困扰了大部分 Windows 用户）</description></item><item><title>生成 HTTP 查询字符串</title><link>https://blog.fissssssh.com/posts/generate-http-query-string/</link><pubDate>Sat, 04 Feb 2023 13:57:23 +0800</pubDate><guid>https://blog.fissssssh.com/posts/generate-http-query-string/</guid><description>什么是 HTTP 查询字符串 例如此 URL：https://example.com:80/query?key1=value2&amp;amp;key2=value2
 对其拆解我们可以得到以下部分：
 https：协议 :// example.com：域名 :80：端口 /query：路径 ?key1=value2&amp;amp;key2=value2：参数（也称作查询字符串） 如何生成 HTTP 查询字符串 暴力拼接 略
 System.Web.HttpUtility var query = HttpUtility.ParseQueryString(string.Empty); query[&amp;#34;a+b&amp;#34;] = &amp;#34;a%b&amp;#34;; query[&amp;#34;b&amp;#34;] = &amp;#34;2+1&amp;#34;; var queryString = query.ToString(); // a+b=a%25b&amp;amp;b=2%2b1 HttpUtility.ParseQueryString(string.Empty) 会返回一个空的NameValueCollection，你只需要往里面填充参数然后调用ToString()即可生成查询字符串

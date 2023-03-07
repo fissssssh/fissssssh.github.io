@@ -4,4 +4,4 @@
 git-filter-repo git-filter-repo 是一个用于重写历史提交的多功能工具，它和 git filter-branch 比较相似，但是其性能远远优于后者
 git 官方也推荐使用 git-filter-repo 而不是 git filter-branch
 安装 前置 git &amp;gt;= 2.22.0 at a minimum; some features require git &amp;gt;= 2.24.0 or later python3 &amp;gt;= 3.5 包管理器安装 PACKAGE_TOOL install git-filter-repo 手动安装 下载最新的 Release 解压后将 git-filter-repo 文件复制到 git --exec-path 文件夹下
-如果你的 python3 指令被命名为 python ，你还需要将 git-filter-repo 文件第一行中的 python3 改为 python（此问题困染了大部分 Windows 用户）</description></item></channel></rss>
+如果你的 python3 指令被命名为 python ，你还需要将 git-filter-repo 文件第一行中的 python3 改为 python（此问题困扰了大部分 Windows 用户）</description></item></channel></rss>
