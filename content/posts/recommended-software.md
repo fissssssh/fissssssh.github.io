@@ -3,7 +3,6 @@ title: "软件推荐"
 date: 2022-06-16T20:08:22+08:00
 tags:
   - tools
-  - softwares
 categories: misc
 draft: false
 ---
