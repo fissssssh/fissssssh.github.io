@@ -11,11 +11,11 @@
 </div>
 
 <script>
-  // remove the unnecessary tags
+  // remove the unnecessary paragraph
   let links = document.querySelector(".links");
-  let paras = links.querySelectorAll("p");
+  let paras = links.querySelectorAll(".links > p");
   for (const p of paras) {
     links.removeChild(p);
   }
 </script>
-{{- end }} {{- end }}{{/* end main */ -}}
+{{- end }} {{- end }}
