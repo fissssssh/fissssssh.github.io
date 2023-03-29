@@ -34,8 +34,8 @@ disqusShortname: fissssssh
 # theme
 params:
   homeInfoParams:
-    Title: Welcome
-    Content: I'm a Chinese software engineer, here is all my experience.
+    Title: fissssssh
+    Content: Happy every day.
 
   socialIcons: # optional
     - name: "github"
