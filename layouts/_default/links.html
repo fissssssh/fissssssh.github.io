@@ -7,7 +7,23 @@
 </header>
 {{- end }} {{- if .Content }}
 <div class="post-content">
-  <div class="links">{{ .Content }}</div>
+  <div class="links">
+    {{ .Content }}
+    <div>
+      <a
+        href="https://github.com/fissssssh/fissssssh.github.io/edit/master/content/links/_index.md"
+        target="_blank"
+      >
+        <div class="link link-add-friend">
+          <img src="/add-friend.svg" alt="Boom!" class="link-avatar" />
+          <div class="link-content">
+            <h3 class="link-name">Be My Friend</h3>
+            <p class="link-description">花径不曾缘客扫，蓬门今始为君开。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
 
 <script>

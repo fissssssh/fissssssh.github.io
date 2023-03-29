@@ -1,5 +1,5 @@
 ---
-title: "FRIENDS"
+title: "Links"
 layout: links
 ---
 

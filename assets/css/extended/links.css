@@ -64,6 +64,7 @@
   margin: 0 8px !important;
   border-radius: 50% !important;
 }
+
 .link-content {
   margin-left: 16px;
   overflow: hidden;
@@ -81,4 +82,12 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.link-add-friend:hover .link-avatar {
+  animation: heartBeat 1.5s infinite;
+}
+.link-add-friend:hover .link-name {
+  text-align: center;
+  animation: heartBeat 1.5s infinite;
 }
