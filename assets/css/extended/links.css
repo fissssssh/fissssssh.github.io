@@ -84,10 +84,10 @@
   text-overflow: ellipsis;
 }
 
-.link-add-friend:hover .link-avatar {
-  animation: heartBeat 1.5s infinite;
+.link-add-friend .link-avatar {
+  border-radius: 0 !important;
 }
-.link-add-friend:hover .link-name {
-  text-align: center;
+
+.link-add-friend:hover .link-avatar {
   animation: heartBeat 1.5s infinite;
 }
