@@ -5,7 +5,7 @@ categories: development
 tags:
   - dotnet
   - ASP.NET Core
-  - C#
+  - CSharp
 draft: false
 ---
 

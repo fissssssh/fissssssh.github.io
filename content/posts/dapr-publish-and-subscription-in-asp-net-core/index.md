@@ -3,7 +3,7 @@ title: "ASP.NET Core 中使用 Dapr 发布订阅"
 date: 2022-12-14T22:25:34+08:00
 categories: development
 tags:
-  - C#
+  - CSharp
   - ASP.NET Core
   - dapr
   - dotnet

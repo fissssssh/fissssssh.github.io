@@ -2,7 +2,7 @@
 title: "生成 HTTP 查询字符串"
 date: 2023-02-04T13:57:23+08:00
 tags:
-  - C#
+  - CSharp
   - dotnet
 ---
 
